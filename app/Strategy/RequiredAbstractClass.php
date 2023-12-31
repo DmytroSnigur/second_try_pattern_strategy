@@ -1,6 +1,6 @@
 <?php
 namespace App\Strategy;
-abstract class RequiredAbstractClass implements iStrategy, iStrategyFormat
+abstract class RequiredAbstractClass implements iStrategy
 {
     protected array $objects = [];
 
@@ -23,15 +23,15 @@ abstract class RequiredAbstractClass implements iStrategy, iStrategyFormat
 
     public function execute(): array
     {
-        $str = ' ';
+        $str = '';
         foreach ($this->objects as $object) {
             foreach ($object as $elem => $val) {
                 $str .= $this->formatToStr($elem, $val);
             }
-            $str .= '_______' . "<br>";
+            $str .= '_______' . "\n";
         }
         return [
-            'name' => $this->fileName() . "<br>",
+            'name' => $this->fileName() . "\n",
             'text' => $str,
         ];
 

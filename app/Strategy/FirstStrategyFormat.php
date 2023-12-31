@@ -7,7 +7,7 @@ class FirstStrategyFormat extends RequiredAbstractClass
 
     protected function formatToStr($elem, $val): string
     {
-        return "{$elem}-{$val} <br>";
+        return "{$elem}-{$val} \n";
     }
 }
 

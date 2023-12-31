@@ -7,6 +7,6 @@ class SecondStrategyFormat extends RequiredAbstractClass
     {
         $wordsElem = preg_replace('([A-Z])', ' ${0}', $elem);
         $lowerWords = strtolower($wordsElem);
-        return "{$lowerWords}|{$val}|<br>";
+        return "{$lowerWords}|{$val}| \n";
     }
 }
